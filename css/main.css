@@ -1,0 +1,73 @@
+body {
+  font-family: Futura, Helvetica, sans;
+  color: #4A4A4A; }
+
+.home {
+  width: 80%;
+  margin: 0 auto; }
+
+h1.logo {
+  text-align: center;
+  margin-bottom: 0; }
+
+h1, h2 {
+  font-weight: normal;
+  font-weight: 200;
+  text-transform: uppercase; }
+
+.address p {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+p.hours span {
+  border-top: 1px #4A4A4A solid;
+  border-bottom: 1px #4A4A4A solid;
+  padding: 5px; }
+
+section {
+  border-top: 1px #4A4A4A solid;
+  padding: 30px 0;
+  margin: 30px 0;
+  text-align: center; }
+
+.menu {
+  overflow: hidden; }
+  .menu .menu-wrap {
+    width: 40%;
+    margin: 0 auto;
+    min-width: 300px; }
+  .menu .col {
+    width: 50%;
+    float: left;
+    text-align: left; }
+  .menu .col + .col {
+    text-align: right; }
+  .menu ul, .menu li {
+    padding: 0;
+    margin: 0; }
+  .menu li {
+    list-style-type: none; }
+
+#map {
+  width: 95%;
+  height: 250px;
+  margin: 50px auto; }
+  #map .leaflet-control-attribution {
+    display: none; }
+
+section.social img {
+  width: 64px;
+  margin: 0 10px;
+  display: inline-block; }
+
+.social-mini {
+  text-align: right; }
+  .social-mini img {
+    width: 32px; }
+
+.social-mini + .address {
+  margin-top: 10px; }
+
+a:active img {
+  position: relative;
+  top: 2px; }
