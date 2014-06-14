@@ -1,0 +1,65 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="/img/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+    <meta name="msapplication-config" content="/img/browserconfig.xml">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+
+    <!-- JavaScript -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // create a map in the "map" div, set the view to a given place and zoom
+        var layer = new L.StamenTileLayer("toner-lite");
+
+        var map = L.map('map', {
+          scrollWheelZoom: false
+        }).setView([55.9486, -3.1926], 16);
+
+        map.addLayer(layer);
+
+        var icon = L.icon({
+          iconUrl: '/img/marker.png',
+          iconRetinaUrl: '/img/marker@2x.png',
+          iconSize: [65, 80],
+          iconAnchor: [32, 80],
+          //popupAnchor: [-3, -76],
+          //shadowUrl: 'my-icon-shadow.png',
+          //shadowRetinaUrl: 'my-icon-shadow@2x.png',
+          //shadowSize: [68, 95],
+          //shadowAnchor: [22, 94]
+        });
+
+        L.marker([55.9486, -3.1926], { icon: icon }).addTo(map)
+            //.bindPopup('Filament')
+            .openPopup();
+      });
+    </script>
+
+</head>
