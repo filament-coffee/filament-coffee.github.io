@@ -74,4 +74,5 @@ a:active img {
 
 @media only screen and (max-device-width: 400px) {
   .menu .menu-wrap {
-    min-width: none; } }
+    min-width: 0;
+    width: 100%; } }
