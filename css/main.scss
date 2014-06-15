@@ -3,6 +3,10 @@ body {
   color: #4A4A4A;
 }
 
+a, a:visited {
+  color: #4a4a4a;
+}
+
 .home {
   width: 80%;
   margin: 0 auto;
@@ -75,10 +79,19 @@ section {
   width: 95%;
   height: 250px;
   margin: 50px auto;
+  margin-bottom: 0;
 
   .leaflet-control-attribution {
     display: none;
   }
+}
+
+.map-link {
+  text-align: right;
+  margin-right: 2.5%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  font-size: 80%;
 }
 
 section.social {

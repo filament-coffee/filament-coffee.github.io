@@ -37,13 +37,15 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        var coords = [55.948728, -3.193302];
+
         // create a map in the "map" div, set the view to a given place and zoom
         var layer = new L.StamenTileLayer("toner-lite");
 
         var map = L.map('map', {
           scrollWheelZoom: false,
           dragging: false
-        }).setView([55.9486, -3.1926], 16);
+        }).setView(coords, 16);
 
         map.addLayer(layer);
 
@@ -59,7 +61,7 @@
           //shadowAnchor: [22, 94]
         });
 
-        L.marker([55.9486, -3.1926], { icon: icon }).addTo(map)
+        L.marker(coords, { icon: icon }).addTo(map)
             //.bindPopup('Filament')
             .openPopup();
       });
