@@ -24,7 +24,7 @@
     <meta name="msapplication-config" content="/img/browserconfig.xml">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}">
 
 
     <!-- JavaScript -->
@@ -39,7 +39,8 @@
         var layer = new L.StamenTileLayer("toner-lite");
 
         var map = L.map('map', {
-          scrollWheelZoom: false
+          scrollWheelZoom: false,
+          dragging: false
         }).setView([55.9486, -3.1926], 16);
 
         map.addLayer(layer);

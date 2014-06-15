@@ -1,0 +1,24 @@
+{
+  "name": "filament",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "datauri": "^0.5.5",
+    "cssmin": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/filament-coffee/filament-coffee.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filament-coffee/filament-coffee.github.io/issues"
+  },
+  "homepage": "https://github.com/filament-coffee/filament-coffee.github.io"
+}
