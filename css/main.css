@@ -1,6 +1,13 @@
 body {
-  font-family: Futura, Helvetica, sans;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   color: #4A4A4A; }
+
+h1, h2, h3, h4, .hours {
+  font-family: Futura, "Open Sans", sans-serif; }
+
+h1, h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase; }
 
 a, a:visited {
   color: #4a4a4a; }
@@ -12,11 +19,6 @@ a, a:visited {
 h1.logo {
   text-align: center;
   margin-bottom: 0; }
-
-h1, h2, h3 {
-  font-weight: normal;
-  font-weight: 200;
-  text-transform: uppercase; }
 
 .address p {
   margin-top: 20px;
@@ -65,6 +67,16 @@ section {
   margin-bottom: 50px;
   margin-top: 10px;
   font-size: 80%; }
+
+section.story p {
+  width: 75%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+  section.story p .attrib {
+    display: block;
+    text-align: right; }
 
 section.social img {
   width: 64px;
