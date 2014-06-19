@@ -19,6 +19,9 @@ a, a:visited {
 h1.logo {
   text-align: center;
   margin-bottom: 0; }
+  h1.logo img, h1.logo svg {
+    width: 250px;
+    margin-top: 40px; }
 
 .address p {
   margin-top: 20px;

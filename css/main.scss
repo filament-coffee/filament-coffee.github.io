@@ -25,6 +25,11 @@ a, a:visited {
 h1.logo {
   text-align: center;
   margin-bottom: 0;
+
+  img, svg {
+    width: 250px;
+    margin-top: 40px;
+  }
 }
 
 
