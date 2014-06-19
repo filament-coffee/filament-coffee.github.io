@@ -1,16 +1,22 @@
 var imgs = document.querySelectorAll('img');
 
-[].slice.call(imgs).filter(function (i) {
-    return i.src.match(/.svg$/);
-}).forEach(replaceSVG);
+var noAnimate = false;
+
+if (window.requestAnimationFrame && !noAnimate) {
+    [].slice.call(imgs).filter(function (i) {
+        return i.src.match(/.svg$/);
+    }).forEach(replaceSVG);
+} else {
+    document.querySelector('h1.logo img').style.display = 'block';
+}
 
 function replaceSVG(el) {
-    var svg = document.createElement('svg');
+    var svg = document.createDocumentFragment();
 
     GET(el.src, function (err, content) {
         if (err) return console.log('Error loading', el.src, err);
 
-        svg.innerHTML = content;
+        var svg = content.querySelector('svg');
 
         insertAfter(svg, el);
         el.parentNode.removeChild(el);
@@ -26,7 +32,7 @@ function GET(url, cb) {
 
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
-            cb(null, request.responseText);
+            cb(null, request.responseXML);
         } else {
             cb(request.status);
         }
@@ -94,6 +100,8 @@ function animatePath(path, duration, delay) {
         var progress = currentFrame / totalFrames;
 
         if (offset >= 2*length) {
+            path.style.strokeDasharray = '';
+            path.style.strokeDashoffset = '';
             window.cancelAnimationFrame(handle);
         } else {
             currentFrame++;

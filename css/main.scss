@@ -23,13 +23,31 @@ a, a:visited {
 
 
 h1.logo {
-  text-align: center;
   margin-bottom: 0;
+  width: 250px;
+  margin: 0 auto;
+  height: 311px;
+  overflow: hidden;
+
+  img {
+    display: none;
+  }
 
   img, svg {
     width: 250px;
+    margin: 0 auto;
+  }
+
+  img {
     margin-top: 40px;
   }
+
+  svg {
+    margin-top: -60px;
+    margin-bottom: -60px;
+    display: block;
+  }
+
 }
 
 
