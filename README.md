@@ -2,3 +2,5 @@
 
 * Uses [github pages](https://pages.github.com/) and therefor [jekyll](http://jekyllrb.com/) to generate and host html.
 * Sass compilation and minification is currently defined in the Makefile (could be changed).
+* Map JS is defined in [./_includes/head.html](./_includes/head.html)
+
