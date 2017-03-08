@@ -126,6 +126,11 @@ i.icon.icon-facebook {
   i.icon.icon-facebook:hover {
     background-image: url("/img/facebook-128-hover.png"); }
 
+i.icon.icon-instagram {
+  background-image: url("/img/instagram_mini.png"); }
+  i.icon.icon-facebook:hover {
+    background-image: url("/img/instagram_mini_hover.png"); }
+
 i.icon.icon-large {
   width: 64px;
   height: 64px;
