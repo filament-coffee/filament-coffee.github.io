@@ -127,8 +127,8 @@ i.icon.icon-facebook {
     background-image: url("/img/facebook-128-hover.png"); }
 
 i.icon.icon-instagram {
-  background-image: url("/img/instagram-32.png"); }
-  i.icon.icon-facebook:hover {
+  background-image: url("/img/instagram-32.svg"); }
+  i.icon.icon-instagram:hover {
     background-image: url("/img/instagram_mini_hover.png"); }
 
 i.icon.icon-large {
