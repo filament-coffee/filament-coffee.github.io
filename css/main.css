@@ -127,9 +127,7 @@ i.icon.icon-facebook {
     background-image: url("/img/facebook-128-hover.png"); }
 
 i.icon.icon-instagram {
-  background-image: url("/img/instagram-32.svg"); }
-  i.icon.icon-instagram:hover {
-    background-image: url("/img/instagram_mini_hover.png"); }
+  background-image: url("/img/insta-32.svg"); }
 
 i.icon.icon-large {
   width: 64px;
